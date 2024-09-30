@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Support My New Website - Mayur D. Film by Keith Pacatang</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 400px; /* Adjusted size */
+      width: 90%; /* Makes it responsive */
+      padding: 20px; /* Slightly reduced padding */
+      background-color: rgba(28, 28, 28, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out, zoomIn 1.2s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      max-height: 90vh; /* Limit the height for larger screens */
+      overflow-y: auto; /* Enable scrolling */
+    }
+
+    /* Logo styling */
+    .logo {
+      max-width: 150px;
+      margin: 0 auto 20px;
+    }
+
+    .container:before, .container:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+      transform: rotate(45deg);
+      animation: animateBackground 3s ease infinite alternate-reverse;
+    }
+
+    h1 {
+      margin-bottom: 15px; /* Reduced margin */
+      font-size: 1.8em; /* Slightly smaller font size */
+      color: #e74c3c;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    p {
+      margin-bottom: 20px; /* Reduced margin */
+      font-size: 1em; /* Slightly smaller font size */
+      color: #d1d1d1;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px; /* Adjusted margin */
+      font-size: 0.9em; /* Slightly smaller font size */
+      color: #ffffffdd;
+      text-transform: uppercase;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px; /* Reduced padding */
+      margin-bottom: 10px; /* Reduced margin */
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #222;
+      color: #fff;
+      font-size: 0.9em; /* Slightly smaller font size */
+      transition: all 0.3s ease;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    input:focus, textarea:focus {
+      border-color: #e74c3c;
+      outline: none;
+      box-shadow: 0 0 10px rgba(231, 76, 60, 0.7);
+    }
+
+    button {
+      padding: 10px 20px; /* Reduced padding */
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em; /* Adjusted font size */
+      letter-spacing: 1px;
+      transition: background-color 0.4s ease;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    button:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: width 0.6s ease;
+    }
+
+    button:hover:before {
+      width: 200%;
+    }
+
+    #thank-you-message, #support-message {
+      display: none;
+      margin-top: 20px; /* Adjusted margin */
+      font-size: 1.2em; /* Slightly smaller font size */
+      color: #e74c3c;
+      animation: slideUp 0.8s ease;
+    }
+
+    #support-btn {
+      margin-top: 15px; /* Adjusted margin */
+      display: inline-block;
+      padding: 10px 20px; /* Reduced padding */
+      background-color: #3498db;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em; /* Adjusted font size */
+      transition: background-color 0.4s ease;
+    }
+
+    #support-btn:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); }
+      to { transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes animateBackground {
+      from { transform: rotate(45deg) translateY(0); }
+      to { transform: rotate(45deg) translateY(-100%); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo section -->
+    <img src="your-logo.png" alt="Website Logo" class="logo">
+
+    <h1>Support My New Website</h1>
+    <p><strong>Mayur D. Film by Keith Pacatang</strong></p>
+
+    <form id="support-form" action="https://formspree.io/f/xzzpnjrd" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="fbname">Facebook Name:</label>
+      <input type="text" id="fbname" name="fbname" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <input type="hidden" name="_replyto" value="messageinfo@gmail.com">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="thank-you-message">
+      <p>Thank you for your support!</p>
+      <div id="support-btn">Support My Website</div>
+    </div>
+
+    <div id="support-message">
+      <p>ayyy joke lang sorry sa time nga na sayang hahaha sorry labyu mwuaah!</p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('support-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+    const supportBtn = document.getElementById('support-btn');
+    const supportMessage = document.getElementById('support-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the form from submitting the usual way
+      const formData = new FormData(form);
+
+      // Use Formspree to send the form data
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYouMessage.style.display = 'block';
+        } else {
+          alert('Submission failed. Please try again.');
+        }
+      }).catch(error => {
+        alert('There was a problem with your submission: ' + error.message);
+      });
+    });
+
+    supportBtn.addEventListener('click', function () {
+      thankYouMessage.style.display = 'none';
+      supportMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
